@@ -47,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        WebView webView = (WebView) findViewById(R.id.webView);
-
-
         DownloadTask task = new DownloadTask();
         String result = null;
         try {
@@ -59,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
 
         Log.i("Contents of URL", result);
     }
